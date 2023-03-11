@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(255, 204, 1);
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.memes-container:hover {
+    color: blue;
+    cursor:pointer;
+}
+
