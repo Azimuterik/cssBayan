@@ -88,7 +88,7 @@ body {
 .mem-pic {
     width: 0;
     height: auto;
-    display: none;
+/*     display: none; */
     margin: 1rem auto 1rem;
     height: auto;
     
@@ -99,7 +99,8 @@ body {
 
 .memes-list:hover > .mem-container > .mem-group > .mem-title-container > .mem-icon {
     opacity: 1;
-    
+    transition: all 1s;
+    -webkit-transition: all 1s;
 }
 
 .mem-input:checked ~ .mem-title-container > .mem-icon {
