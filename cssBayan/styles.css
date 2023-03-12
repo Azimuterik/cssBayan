@@ -1,6 +1,6 @@
 body {
     background-color: rgb(255, 204, 1);
-    
+    font-size: 2rem;
     
     box-sizing: border-box;
 }
@@ -11,11 +11,35 @@ body {
     max-width: 80rem;
     margin-left: auto;
     margin-right: auto; 
+    color: blue;
 }
 .memes-list:hover {
-    color: blue;
+    color: black;
     cursor:pointer;
+
 }
+
+.mem-icon {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.memes-list:hover {
+    color: black;
+    cursor:pointer;
+     
+    /* для крестиков */
+}
+
+.memes-list:hover  {
+    color: black;
+    cursor:pointer;
+     
+    /* для крестиков */
+}
+
+
+
 /* mem-container */
 .mem-container {
     border: 0.1rem solid red;
@@ -25,22 +49,65 @@ body {
 .mem-group {
     cursor: pointer;
     display:block;
+    
 }
+
+.mem-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.mem-title {
+    display: block;
+    
+}
+
 
 .mem-input {
     -webkit-appearance: none;
     appearance: none;
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 
-.mem-input:checked + .mem-pic {
+
+
+.mem-input:checked ~ .mem-pic{
     display: block;
+    width: 50%;    
+}
+
+.mem-input:checked ~ .mem-title-container {
     color: black;
+}
+
+
+.mem-pic {
+    width: 0;
+    display: none;
+    margin: 1rem auto 1rem;
+    transition: transform 1s;
     
 }
 
-.mem-pic {
+
+
+.memes-list:hover > .mem-container > .mem-group > .mem-title-container > .mem-icon {
+    opacity: 1;
+    
+}
+
+.mem-input:checked ~ .mem-title-container > .mem-icon {
+    transform: rotate(0deg);
+}
+
+.mem-input:hover ~ .mem-pic{
+    display: block;
+    height: auto;
     width: 50%;
-    display: none;
-    margin: 1rem auto 1rem;
+    transition: all 3s;
     
 }
