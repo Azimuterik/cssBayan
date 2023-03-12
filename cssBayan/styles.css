@@ -5,6 +5,11 @@ body {
     box-sizing: border-box;
 }
 
+.memes-title {
+    display: flex;
+  align-items: center;
+  justify-content: center 
+}
 /* memes-list */
 .memes-list {
     background-color: bisque;
